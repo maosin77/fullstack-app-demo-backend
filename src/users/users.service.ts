@@ -12,16 +12,12 @@ export class UsersService {
 
   async findAll() {
     const users = await this.usersRepository.find();
-    console.log(users);
     return users;
   }
 
   async create(@Body() createUserDto: CreateUserDto) {
-    // todo: do validation
     const newUser = this.usersRepository.create(createUserDto);
-
-    this.usersRepository.save(newUser);
-
-    return 'This action adds a new user';
+    const createdUser = await this.usersRepository.save(newUser);
+    return createdUser;
   }
 }
