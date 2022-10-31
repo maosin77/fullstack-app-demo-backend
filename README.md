@@ -14,7 +14,7 @@ This micro-app contains a simple form. To achieve this amazing UI I've used [mui
 ## How to run tests?
 
 ### to run e2e tests
-`$ test:e2e`
+`$ yarn run test:e2e`
 ### to run unit tests
-`$ test`
+`$ yarn run test`
 
